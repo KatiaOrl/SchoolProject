@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolProject", "SchoolProj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolProject.Domain", "SchoolProject.Domain\SchoolProject.Domain.csproj", "{D6A08C35-8FDA-48B7-947D-A3E31D276266}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolProject.DataAccess", "SchoolProject.DataAccess\SchoolProject.DataAccess.csproj", "{24163A67-E304-49B0-9BE8-E645B2A4AA08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D6A08C35-8FDA-48B7-947D-A3E31D276266}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6A08C35-8FDA-48B7-947D-A3E31D276266}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6A08C35-8FDA-48B7-947D-A3E31D276266}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24163A67-E304-49B0-9BE8-E645B2A4AA08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24163A67-E304-49B0-9BE8-E645B2A4AA08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24163A67-E304-49B0-9BE8-E645B2A4AA08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24163A67-E304-49B0-9BE8-E645B2A4AA08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
