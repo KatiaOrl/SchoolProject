@@ -7,7 +7,7 @@ using System.Text;
 
 namespace SchoolProject.DataAccess
 {
-    class SchoolProjectDBContext : DbContext
+    public class SchoolProjectDBContext : DbContext
     {
         public DbSet<Student> Students { get; set; }
         public DbSet<ClassNumb> ClassNumbs { get; set; }
