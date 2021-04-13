@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using SchoolProject.DataAccess;
+using SchoolProject.DataAccess.Entities;
 using SchoolProject.Models;
 using System;
 using System.Collections.Generic;
@@ -12,15 +15,22 @@ namespace SchoolProject.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+        private SchoolProjectDBContext _context;
+        public HomeController(ILogger<HomeController> logger, SchoolProjectDBContext context)
+        {
+            _logger = logger;
+            _context = context;
+        }
+        /*
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-        }
+        }*/
 
         public IActionResult Index()
         {
-            return View();
+            List<ClassNumb> _classNumb = _context.ClassNumbs.Include(a => a.student).ToList();
+            return View(_classNumb);
         }
 
         public IActionResult Privacy()

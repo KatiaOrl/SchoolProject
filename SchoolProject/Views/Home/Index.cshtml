@@ -1,8 +1,32 @@
-﻿@{
+﻿@model List<SchoolProject.DataAccess.Entities.ClassNumb>
+
+@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@*
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
+*@
+<div class="row">
+    <div class="col-md-12">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <h2>@item.classNumb</h2>
+                    <ul>
+                        @if (item.student != null)
+                        {
+                            foreach (var subItem in item.student)
+                            {
+                                <li>@subItem.firstName @subItem.lastName</li>
+                            }
+                        }
+                    </ul>
+                </li>
+            }
+        </ul>
+    </div>
 </div>
