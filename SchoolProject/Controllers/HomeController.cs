@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using SchoolProject.BuissnesLayer;
+using SchoolProject.BuissnesLayer.Interfaces;
 using SchoolProject.DataAccess;
 using SchoolProject.DataAccess.Entities;
 using SchoolProject.Models;
@@ -15,11 +17,15 @@ namespace SchoolProject.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private SchoolProjectDBContext _context;
-        public HomeController(ILogger<HomeController> logger, SchoolProjectDBContext context)
+        //private SchoolProjectDBContext _context;
+        //private IClassNumbRepository _classNumbRep;
+        private DataManager _dataManager;
+        public HomeController(ILogger<HomeController> logger, DataManager dataManager/*SchoolProjectDBContext context, IClassNumbRepository classNumb*/)
         {
             _logger = logger;
-            _context = context;
+            //_context = context;
+            //_classNumbRep = classNumb;
+            _dataManager = dataManager;
         }
         /*
         public HomeController(ILogger<HomeController> logger)
@@ -29,7 +35,9 @@ namespace SchoolProject.Controllers
 
         public IActionResult Index()
         {
-            List<ClassNumb> _classNumb = _context.ClassNumbs.Include(a => a.student).ToList();
+            //List<ClassNumb> _classNumb = _context.ClassNumbs.Include(a => a.student).ToList();
+            //List<ClassNumb> _classNumb = _classNumbRep.GetAllClasses().ToList();
+            List<ClassNumb> _classNumb = _dataManager.ClassNumbs.GetAllClasses(true).ToList();
             return View(_classNumb);
         }
 

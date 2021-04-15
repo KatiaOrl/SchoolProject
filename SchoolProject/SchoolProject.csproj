@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SchoolProject.BuissnesLayer\SchoolProject.BuissnesLayer.csproj" />
     <ProjectReference Include="..\SchoolProject.DataAccess\SchoolProject.DataAccess.csproj" />
   </ItemGroup>
 

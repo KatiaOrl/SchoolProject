@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SchoolProject.BuissnesLayer;
+using SchoolProject.BuissnesLayer.Implementation;
+using SchoolProject.BuissnesLayer.Interfaces;
 using SchoolProject.DataAccess;
 using System;
 using System.Collections.Generic;
@@ -27,6 +30,9 @@ namespace SchoolProject
         {
             var connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<SchoolProjectDBContext>(options => options.UseSqlServer(connection, b => b.MigrationsAssembly("SchoolProject.DataAccess")));
+            services.AddTransient<IClassNumbRepository, DBClassNumbRepository>();
+            services.AddTransient<IStudentsRepository, DBStudentsRepository>();
+            services.AddScoped<DataManager>();
             services.AddControllersWithViews();
         }
 
