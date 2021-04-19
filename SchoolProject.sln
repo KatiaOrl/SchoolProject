@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolProject", "SchoolProject\SchoolProject.csproj", "{72C46FF4-2CD0-47ED-B8FD-17F88193B958}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolProject.WebAPI", "SchoolProject\SchoolProject.WebAPI.csproj", "{72C46FF4-2CD0-47ED-B8FD-17F88193B958}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolProject.Domain", "SchoolProject.Domain\SchoolProject.Domain.csproj", "{D6A08C35-8FDA-48B7-947D-A3E31D276266}"
 EndProject
