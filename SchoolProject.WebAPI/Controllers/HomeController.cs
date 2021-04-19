@@ -5,14 +5,14 @@ using SchoolProject.BuissnesLayer;
 using SchoolProject.DataAccess.Interfaces;
 using SchoolProject.DataAccess;
 using SchoolProject.DataAccess.Entities;
-using SchoolProject.Models;
+using SchoolProject.WebAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SchoolProject.Controllers
+namespace SchoolProject.WebAPI.Controllers
 {
     public class HomeController : Controller
     {

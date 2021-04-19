@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using SchoolProject.DataAccess;
 
-namespace SchoolProject
+namespace SchoolProject.WebAPI
 {
     public class Program
     {
@@ -39,6 +39,6 @@ namespace SchoolProject
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
-                
+
     }
 }
