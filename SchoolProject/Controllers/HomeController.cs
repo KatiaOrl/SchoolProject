@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SchoolProject.BuissnesLayer;
-using SchoolProject.BuissnesLayer.Interfaces;
+using SchoolProject.DataAccess.Interfaces;
 using SchoolProject.DataAccess;
 using SchoolProject.DataAccess.Entities;
 using SchoolProject.Models;

@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolProject.Domain", "Sch
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolProject.DataAccess", "SchoolProject.DataAccess\SchoolProject.DataAccess.csproj", "{24163A67-E304-49B0-9BE8-E645B2A4AA08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolProject.BuissnesLayer", "SchoolProject.BuissnesLayer\SchoolProject.BuissnesLayer.csproj", "{EA0FCF5D-AE55-4976-B0FB-6A1168D51BDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolProject.BuissnesLayer", "SchoolProject.BuissnesLayer\SchoolProject.BuissnesLayer.csproj", "{EA0FCF5D-AE55-4976-B0FB-6A1168D51BDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

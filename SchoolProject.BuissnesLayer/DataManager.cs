@@ -1,4 +1,4 @@
-﻿using SchoolProject.BuissnesLayer.Interfaces;
+﻿using SchoolProject.DataAccess.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
