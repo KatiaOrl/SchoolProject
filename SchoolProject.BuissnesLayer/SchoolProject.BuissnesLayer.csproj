@@ -5,16 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Implementation\**" />
-    <Compile Remove="Interfaces\**" />
-    <EmbeddedResource Remove="Implementation\**" />
-    <EmbeddedResource Remove="Interfaces\**" />
-    <None Remove="Implementation\**" />
-    <None Remove="Interfaces\**" />
+    <Compile Remove="DataManager.cs" />
+    <Compile Remove="Implementation\DBClassNumbRepository.cs" />
+    <Compile Remove="Implementation\DBStudentsRepository.cs" />
+    <Compile Remove="Interfaces\IClassNumbRepository.cs" />
+    <Compile Remove="Interfaces\IStudentsRepository.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SchoolProject.DataAccess\SchoolProject.DataAccess.csproj" />
+    <ProjectReference Include="..\SchoolProject.Domain\SchoolProject.Domain.csproj" />
   </ItemGroup>
 
 </Project>

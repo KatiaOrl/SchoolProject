@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SchoolProject.BuissnesLayer;
+//using SchoolProject.BuissnesLayer;
 using SchoolProject.DataAccess.Implementation;
 using SchoolProject.DataAccess.Interfaces;
 using SchoolProject.DataAccess;
@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace SchoolProject.WebAPI
 {
@@ -33,6 +34,7 @@ namespace SchoolProject.WebAPI
             services.AddTransient<IClassNumbRepository, DBClassNumbRepository>();
             services.AddTransient<IStudentsRepository, DBStudentsRepository>();
             services.AddScoped<DataManager>();
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews();
         }
 

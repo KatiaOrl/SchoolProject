@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+//using SchoolProject.Domain;
 using SchoolProject.DataAccess.Entities;
 using System;
 using System.Collections.Generic;

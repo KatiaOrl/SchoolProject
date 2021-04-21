@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SchoolProject.Domain.Interfaces
 {
-    interface IClassNumb
+    public interface IClassNumb
     {
         public int? classNumbId { get; }
     }
