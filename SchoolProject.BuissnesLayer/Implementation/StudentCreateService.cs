@@ -12,15 +12,23 @@ namespace SchoolProject.BuissnesLayer.Implementation
     public class StudentCreateService : IStudentCreateService
     {
         private IStudentsRepository _studentDataAccess { get; }
+        private IClassNumbGetService _classNumbGetService { get; }
 
-        public StudentCreateService(IStudentsRepository studentDataAccess)
+        public StudentCreateService(IStudentsRepository studentDataAccess, IClassNumbGetService classNumbGetService)
         {
             _studentDataAccess = studentDataAccess;
+            _classNumbGetService = classNumbGetService;
         }
 
-        public Task<Student> CreateAsync(StudentsUpdateModel customer)
+        public async Task<Student> CreateAsync(StudentsUpdateModel student)
         {
-            return _studentDataAccess.InsertAsync(customer);
+            await _classNumbGetService.ValidateAsync(student);
+            //await CustomerGetService.ValidateAsync(order);
+
+            //order.Date = DateTime.Now;
+            //order.Arrived = false;
+
+            return await _studentDataAccess.InsertAsync(student);
         }
     }
     

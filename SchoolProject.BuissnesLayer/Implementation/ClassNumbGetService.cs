@@ -36,12 +36,19 @@ namespace SchoolProject.BuissnesLayer.Implementation
                 throw new ArgumentNullException(nameof(container));
             }
 
-            var entity = await _classNumbDataAccess.GetByAsync(container);
+            //var entity = await _classNumbDataAccess.GetByAsync(container);
 
-            if (entity is null)
+            //if (entity is null)
+            var classNumb = await this.GetBy(container);
+
+            if (container.classNumbId.HasValue && classNumb == null)
             {
-                throw new InvalidOperationException($"Book not found by ID {container.classNumbId}");
+                throw new InvalidOperationException($"ClassNumb not found by ID {container.classNumbId}");
             }
+        }
+        private async Task<ClassNumb> GetBy(IClassNumb container)
+        {
+            return await this._classNumbDataAccess.GetByAsync(container);
         }
     }
 }
